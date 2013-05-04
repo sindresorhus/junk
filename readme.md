@@ -1,6 +1,7 @@
 # junk [![Build Status](https://secure.travis-ci.org/sindresorhus/junk.png?branch=master)](http://travis-ci.org/sindresorhus/junk)
 
-Helps you filter out OS junk files like .DS_Store and Thumbs.db
+Helps you filter out [OS junk files](test.js) like .DS_Store and Thumbs.db
+
 
 
 ## Getting started
@@ -38,7 +39,7 @@ Convenience method to test a string against all the `junk.rules` entries.
 
 ### junk.rules
 
-Returns an [array of regexes](test.js) you can match against.
+Returns an array of regexes you can match against.
 
 
 ## License
