@@ -19,11 +19,7 @@ fs.readdir('path', function (err, files) {
 	console.log(files);
 	// ['.DS_Store', 'test.jpg']
 
-	files = files.filter(function (file) {
-		return !junk.test(file);
-	});
-
-	console.log(files);
+	console.log(files.filter(junk.isnt));
 	// ['test.jpg']
 });
 ```
@@ -32,9 +28,14 @@ fs.readdir('path', function (err, files) {
 ## Documentation
 
 
-### junk.test(filename)
+### junk.is(filename)
 
-Convenience method to test a string against all the `junk.rules` entries.
+Returns true if `filename` matches any of the `junk.rules`.
+
+
+### junk.isnt(filename)
+
+Returns true if `filename` doesn't match any of the `junk.rules`.
 
 
 ### junk.rules

@@ -18,8 +18,12 @@ exports.rules = [
     /^Desktop.ini$/       // stores custom folder attributes
 ];
 
-exports.test = function (filename) {
+exports.is = function (filename) {
     return exports.rules.some(function (rule) {
         return rule.test(filename);
     });
+};
+
+exports.isnt = function (filename) {
+    return !exports.is(filename);
 };
