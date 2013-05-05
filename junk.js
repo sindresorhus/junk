@@ -15,7 +15,7 @@ exports.rules = [
 	// Windows
 	/^Thumbs\.db$/,       // image file cache
 	/^ehthumbs\.db$/,     // folder config file
-	/^Desktop.ini$/       // stores custom folder attributes
+	/^Desktop\.ini$/       // stores custom folder attributes
 ];
 
 exports.is = function (filename) {
