@@ -1,6 +1,9 @@
 'use strict';
 
 exports.rules = [
+	// All
+	/^npm-debug\.log$/,   // npm error log
+	/^\..*\.swp$/,        // vim state
 	// OS X
 	/^\.DS_Store/,        // stores custom folder attributes
 	/^\.AppleDouble$/,    // stores additional file resources

@@ -14,7 +14,9 @@ var junkFiles = [
 	'test~',
 	'Thumbs.db',
 	'ehthumbs.db',
-	'Desktop.ini'
+	'Desktop.ini',
+	'npm-debug.log',
+	'.test.swp'
 ];
 
 describe('junk#is()', function () {
