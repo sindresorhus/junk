@@ -1,7 +1,6 @@
-/*global describe, it */
 'use strict';
 var assert = require('assert');
-var junk = require('./junk');
+var junk = require('./index');
 var junkFiles = [
 	'.DS_Store',
 	'.AppleDouble',
@@ -27,8 +26,8 @@ describe('junk#is()', function () {
 	});
 });
 
-describe('junk#isnt()', function () {
+describe('junk#not()', function () {
 	it('should not match non-junk files', function () {
-		assert(junk.isnt('test'));
+		assert(junk.not('test'));
 	});
 });

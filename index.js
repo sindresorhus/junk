@@ -27,6 +27,6 @@ exports.is = function (filename) {
 	});
 };
 
-exports.isnt = function (filename) {
+exports.not = exports.isnt = function (filename) {
 	return !exports.is(filename);
 };
