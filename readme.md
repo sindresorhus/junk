@@ -1,4 +1,4 @@
-# junk [![Build Status](https://travis-ci.org/sindresorhus/junk.png?branch=master)](https://travis-ci.org/sindresorhus/junk)
+# junk [![Build Status](https://travis-ci.org/sindresorhus/junk.svg?branch=master)](https://travis-ci.org/sindresorhus/junk)
 
 > Filter out [OS junk files](test.js) like `.DS_Store` and `Thumbs.db`
 
@@ -10,7 +10,7 @@ $ npm install --save junk
 ```
 
 
-## Example
+## Usage
 
 ```js
 var fs = require('fs');
