@@ -5,7 +5,7 @@
 
 ## Install
 
-```bash
+```sh
 $ npm install --save junk
 ```
 
@@ -30,17 +30,17 @@ fs.readdir('path', function (err, files) {
 
 ### junk.is(filename)
 
-Returns true if `filename` matches any of the `junk.rules`.
+Returns true if `filename` matches a junk file.
 
 ### junk.not(filename)
 
-Returns true if `filename` doesn't match any of the `junk.rules`.
+Returns true if `filename` doesn't match a junk file.
 
-### junk.rules
+### junk.re
 
-Returns an array of regexes you can match against.
+The regex used for matching.
 
 
 ## License
 
-[MIT](http://opensource.org/licenses/MIT) © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](http://sindresorhus.com)

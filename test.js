@@ -1,7 +1,8 @@
 'use strict';
-var assert = require('assert');
-var junk = require('./index');
-var junkFiles = [
+var test = require('ava');
+var junk = require('./');
+
+var fixture = [
 	'.DS_Store',
 	'.AppleDouble',
 	'.LSOverride',
@@ -18,16 +19,12 @@ var junkFiles = [
 	'.test.swp'
 ];
 
-describe('junk#is()', function () {
-	it('should match junk files', function () {
-		junkFiles.forEach(function (el) {
-			assert(junk.is(el), el);
-		});
+test('should match junk files', function (t) {
+	fixture.forEach(function (el) {
+		t.assert(junk.is(el));
 	});
 });
 
-describe('junk#not()', function () {
-	it('should not match non-junk files', function () {
-		assert(junk.not('test'));
-	});
+test('should not match non-junk files', function (t) {
+	t.assert(junk.not('test'));
 });
