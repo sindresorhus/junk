@@ -1,8 +1,7 @@
-'use strict';
-var test = require('ava');
-var junk = require('./');
+import test from 'ava';
+import m from './';
 
-var fixture = [
+const fixture = [
 	'.DS_Store',
 	'.AppleDouble',
 	'.LSOverride',
@@ -19,12 +18,12 @@ var fixture = [
 	'.test.swp'
 ];
 
-test('should match junk files', function (t) {
-	fixture.forEach(function (el) {
-		t.assert(junk.is(el));
-	});
+test('matches junk files', t => {
+	for (const el of fixture) {
+		t.true(m.is(el));
+	}
 });
 
-test('should not match non-junk files', function (t) {
-	t.assert(junk.not('test'));
+test('does not match non-junk files', t => {
+	t.true(m.not('test'));
 });
