@@ -3,7 +3,7 @@
 // // All
 // /^npm-debug\.log$/,   // npm error log
 // /^\..*\.swp$/,        // vim state
-// // OS X
+// // macOS
 // /^\.DS_Store$/,       // stores custom folder attributes
 // /^\.AppleDouble$/,    // stores additional file resources
 // /^\.LSOverride$/,     // contains the absolute path to the app to be used
