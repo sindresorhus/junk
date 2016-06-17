@@ -5,7 +5,7 @@ const fixture = [
 	'.DS_Store',
 	'.AppleDouble',
 	'.LSOverride',
-	'Icon',
+	'Icon\r',
 	'._test',
 	'.Spotlight-V100',
 	'.Trashes',
@@ -18,6 +18,12 @@ const fixture = [
 	'.test.swp'
 ];
 
+const notFixture = [
+	'test',
+	'Icon',
+	'Icons.woff'
+];
+
 test('matches junk files', t => {
 	for (const el of fixture) {
 		t.true(m.is(el));
@@ -25,5 +31,7 @@ test('matches junk files', t => {
 });
 
 test('does not match non-junk files', t => {
-	t.true(m.not('test'));
+	for (const el of notFixture) {
+		t.true(m.not(el));
+	}
 });
