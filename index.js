@@ -21,10 +21,6 @@
 
 exports.re = /^npm-debug\.log$|^\..*\.swp$|^\.DS_Store$|^\.AppleDouble$|^\.LSOverride$|^Icon\r$|^\._.*|^\.Spotlight-V100(?:$|\/)|\.Trashes|^__MACOSX$|~$|^Thumbs\.db$|^ehthumbs\.db$|^Desktop\.ini$/;
 
-exports.is = function (filename) {
-	return exports.re.test(filename);
-};
+exports.is = filename => exports.re.test(filename);
 
-exports.not = exports.isnt = function (filename) {
-	return !exports.is(filename);
-};
+exports.not = filename => !exports.is(filename);

@@ -1,7 +1,7 @@
 {
   "name": "junk",
   "version": "1.0.3",
-  "description": "Filter out OS junk files like .DS_Store and Thumbs.db",
+  "description": "Filter out system junk files like .DS_Store and Thumbs.db",
   "license": "MIT",
   "repository": "sindresorhus/junk",
   "author": {
@@ -10,7 +10,7 @@
     "url": "sindresorhus.com"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=4"
   },
   "scripts": {
     "test": "xo && ava"
@@ -28,10 +28,16 @@
     "exclude",
     "filter",
     "temp",
-    "tmp"
+    "tmp",
+    "system",
+    "clean",
+    "cleanup"
   ],
   "devDependencies": {
     "ava": "*",
     "xo": "*"
+  },
+  "xo": {
+    "esnext": true
   }
 }

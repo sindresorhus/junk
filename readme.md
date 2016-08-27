@@ -1,11 +1,11 @@
 # junk [![Build Status](https://travis-ci.org/sindresorhus/junk.svg?branch=master)](https://travis-ci.org/sindresorhus/junk)
 
-> Filter out [OS junk files](test.js) like `.DS_Store` and `Thumbs.db`
+> Filter out [system junk files](test.js) like `.DS_Store` and `Thumbs.db`
 
 
 ## Install
 
-```sh
+```
 $ npm install --save junk
 ```
 
@@ -13,10 +13,10 @@ $ npm install --save junk
 ## Usage
 
 ```js
-var fs = require('fs');
-var junk = require('junk');
+const fs = require('fs');
+const junk = require('junk');
 
-fs.readdir('path', function (err, files) {
+fs.readdir('some/path', (err, files) => {
 	console.log(files);
 	//=> ['.DS_Store', 'test.jpg']
 
@@ -30,17 +30,17 @@ fs.readdir('path', function (err, files) {
 
 ### junk.is(filename)
 
-Returns true if `filename` matches a junk file.
+Returns `true` if `filename` matches a junk file.
 
 ### junk.not(filename)
 
-Returns true if `filename` doesn't match a junk file.
+Returns `true` if `filename` doesn't match a junk file.
 
 ### junk.re
 
-The regex used for matching.
+Regex used for matching.
 
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)
