@@ -8,6 +8,7 @@ const fixture = [
 	'Icon\r',
 	'._test',
 	'.Spotlight-V100',
+	'.Spotlight-V100/Store-V2/C6DBF25D-81D4-4B57-907E-B4A555E72C90/0.directoryStoreFile',
 	'.Trashes',
 	'__MACOSX',
 	'test~',
@@ -21,7 +22,8 @@ const fixture = [
 const notFixture = [
 	'test',
 	'Icon',
-	'Icons.woff'
+	'Icons.woff',
+	'.Spotlight-V100-unicorn'
 ];
 
 test('matches junk files', t => {
