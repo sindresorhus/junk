@@ -36,7 +36,7 @@ Returns `true` if `filename` matches a junk file.
 
 Returns `true` if `filename` doesn't match a junk file.
 
-### junk.re
+### junk.regex
 
 Regex used for matching.
 

@@ -1,5 +1,5 @@
 import test from 'ava';
-import m from './';
+import m from '.';
 
 const fixture = [
 	'.DS_Store',
@@ -16,7 +16,8 @@ const fixture = [
 	'ehthumbs.db',
 	'Desktop.ini',
 	'npm-debug.log',
-	'.test.swp'
+	'.test.swp',
+	'@eaDir'
 ];
 
 const notFixture = [

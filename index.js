@@ -2,25 +2,28 @@
 
 // # All
 // /^npm-debug\.log$/,           // npm error log
-// /^\..*\.swp$/,                // vim state
-// // macOS
-// /^\.DS_Store$/,               // stores custom folder attributes
-// /^\.AppleDouble$/,            // stores additional file resources
-// /^\.LSOverride$/,             // contains the absolute path to the app to be used
-// /^Icon\r$/,                   // custom Finder icon: http://superuser.com/questions/298785/icon-file-on-os-x-desktop
-// /^\._.*/,                     // thumbnail
-// /^\.Spotlight-V100(?:$|\/)/,  // directory that might appear on external disk
-// /\.Trashes/,                  // file that might appear on external disk
-// /^__MACOSX$/,                 // resource fork
+// /^\..*\.swp$/,                // Vim state
+
+// # macOS
+// /^\.DS_Store$/,               // Stores custom folder attributes
+// /^\.AppleDouble$/,            // Stores additional file resources
+// /^\.LSOverride$/,             // Contains the absolute path to the app to be used
+// /^Icon\r$/,                   // Custom Finder icon: http://superuser.com/questions/298785/icon-file-on-os-x-desktop
+// /^\._.*/,                     // Thumbnail
+// /^\.Spotlight-V100(?:$|\/)/,  // Directory that might appear on external disk
+// /\.Trashes/,                  // File that might appear on external disk
+// /^__MACOSX$/,                 // Resource fork
+
 // # Linux
-// /~$/,                         // backup file
+// /~$/,                         // Backup file
+
 // # Windows
-// /^Thumbs\.db$/,               // image file cache
-// /^ehthumbs\.db$/,             // folder config file
-// /^Desktop\.ini$/              // stores custom folder attributes
+// /^Thumbs\.db$/,               // Image file cache
+// /^ehthumbs\.db$/,             // Folder config file
+// /^Desktop\.ini$/              // Stores custom folder attributes
 // /^@eaDir$/                    // Synology Diskstation "hidden" folder where the server stores thumbnails
 
-exports.re = /^npm-debug\.log$|^\..*\.swp$|^\.DS_Store$|^\.AppleDouble$|^\.LSOverride$|^Icon\r$|^\._.*|^\.Spotlight-V100(?:$|\/)|\.Trashes|^__MACOSX$|~$|^Thumbs\.db$|^ehthumbs\.db$|^Desktop\.ini$|^@eaDir$/;
+exports.regex = exports.re = /^npm-debug\.log$|^\..*\.swp$|^\.DS_Store$|^\.AppleDouble$|^\.LSOverride$|^Icon\r$|^\._.*|^\.Spotlight-V100(?:$|\/)|\.Trashes|^__MACOSX$|~$|^Thumbs\.db$|^ehthumbs\.db$|^Desktop\.ini$|^@eaDir$/;
 
 exports.is = filename => exports.re.test(filename);
 
