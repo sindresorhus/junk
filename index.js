@@ -18,8 +18,9 @@
 // /^Thumbs\.db$/,               // image file cache
 // /^ehthumbs\.db$/,             // folder config file
 // /^Desktop\.ini$/              // stores custom folder attributes
+// /^@eaDir$/                    // Synology Diskstation "hidden" folder where the server stores thumbnails
 
-exports.re = /^npm-debug\.log$|^\..*\.swp$|^\.DS_Store$|^\.AppleDouble$|^\.LSOverride$|^Icon\r$|^\._.*|^\.Spotlight-V100(?:$|\/)|\.Trashes|^__MACOSX$|~$|^Thumbs\.db$|^ehthumbs\.db$|^Desktop\.ini$/;
+exports.re = /^npm-debug\.log$|^\..*\.swp$|^\.DS_Store$|^\.AppleDouble$|^\.LSOverride$|^Icon\r$|^\._.*|^\.Spotlight-V100(?:$|\/)|\.Trashes|^__MACOSX$|~$|^Thumbs\.db$|^ehthumbs\.db$|^Desktop\.ini$|^@eaDir$/;
 
 exports.is = filename => exports.re.test(filename);
 
