@@ -13,6 +13,10 @@ const blacklist = [
 	'^\\.Spotlight-V100(?:$|\\/)',   // Directory that might appear on external disk
 	'\\.Trashes',                    // File that might appear on external disk
 	'^__MACOSX$',                    // Resource fork
+  '^\\.BridgeCache',               // Adobe Bridge cache file
+  '^\\.BridgeCacheT',              // Adobe Bridge cache file
+  '^\\.BridgeLabelsAndRatings',    // Adobe Bridge cache file
+  '^\\.BridgeSort',    // Adobe Bridge cache file
 	// # Linux
 	'~$',                            // Backup file
 	// # Windows
