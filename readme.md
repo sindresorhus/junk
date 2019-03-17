@@ -6,23 +6,28 @@
 ## Install
 
 ```
-$ npm install --save junk
+$ npm install junk
 ```
 
 
 ## Usage
 
 ```js
+const {promisify} = require('util');
 const fs = require('fs');
 const junk = require('junk');
 
-fs.readdir('some/path', (err, files) => {
+const pReaddir = promisify(fs.readdir);
+
+(async () => {
+	const files = await pReaddir('some/path');
+
 	console.log(files);
 	//=> ['.DS_Store', 'test.jpg']
 
 	console.log(files.filter(junk.not));
 	//=> ['test.jpg']
-});
+})();
 ```
 
 

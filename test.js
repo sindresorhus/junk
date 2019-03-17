@@ -1,5 +1,5 @@
 import test from 'ava';
-import m from '.';
+import junk from '.';
 
 const fixture = [
 	'.DS_Store',
@@ -29,12 +29,12 @@ const notFixture = [
 
 test('matches junk files', t => {
 	for (const el of fixture) {
-		t.true(m.is(el));
+		t.true(junk.is(el));
 	}
 });
 
 test('does not match non-junk files', t => {
 	for (const el of notFixture) {
-		t.true(m.not(el));
+		t.true(junk.not(el));
 	}
 });
