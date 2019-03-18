@@ -25,11 +25,13 @@ const blacklist = [
 	'@eaDir$' // Synology Diskstation "hidden" folder where the server stores thumbnails
 ];
 
-exports.re = new RegExp(blacklist.join('|'));
+exports.re = () => {
+	throw new Error('`junk.re` was renamed to `junk.regex`');
+};
 
-exports.regex = exports.re;
+exports.regex = new RegExp(blacklist.join('|'));
 
-exports.is = filename => exports.re.test(filename);
+exports.is = filename => exports.regex.test(filename);
 
 exports.not = filename => !exports.is(filename);
 
