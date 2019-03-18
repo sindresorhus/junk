@@ -28,13 +28,13 @@ const notFixture = [
 ];
 
 test('matches junk files', t => {
-	for (const el of fixture) {
-		t.true(junk.is(el));
+	for (const element of fixture) {
+		t.true(junk.is(element));
 	}
 });
 
 test('does not match non-junk files', t => {
-	for (const el of notFixture) {
-		t.true(junk.not(el));
+	for (const element of notFixture) {
+		t.true(junk.not(element));
 	}
 });

@@ -10,7 +10,7 @@ declare const junk: {
 	not(filename: string): boolean;
 
 	/**
-	Regex used for matching.
+	Regex used for matching junk files.
 	*/
 	readonly regex: RegExp;
 };

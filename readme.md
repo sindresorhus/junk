@@ -43,7 +43,7 @@ Returns `true` if `filename` doesn't match a junk file.
 
 ### junk.regex
 
-Regex used for matching.
+Regex used for matching junk files.
 
 
 ## License

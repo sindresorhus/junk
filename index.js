@@ -4,6 +4,7 @@ const blacklist = [
 	// # All
 	'^npm-debug\\.log$', // Error log for npm
 	'^\\..*\\.swp$', // Swap file for vim state
+
 	// # macOS
 	'^\\.DS_Store$', // Stores custom folder attributes
 	'^\\.AppleDouble$', // Stores additional file resources
@@ -13,8 +14,10 @@ const blacklist = [
 	'^\\.Spotlight-V100(?:$|\\/)', // Directory that might appear on external disk
 	'\\.Trashes', // File that might appear on external disk
 	'^__MACOSX$', // Resource fork
+
 	// # Linux
 	'~$', // Backup file
+
 	// # Windows
 	'^Thumbs\\.db$', // Image file cache
 	'^ehthumbs\\.db$', // Folder config file
