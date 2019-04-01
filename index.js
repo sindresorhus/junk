@@ -35,4 +35,5 @@ exports.is = filename => exports.regex.test(filename);
 
 exports.not = filename => !exports.is(filename);
 
+// TODO: Remove this for the next major release
 exports.default = module.exports;

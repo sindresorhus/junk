@@ -1,5 +1,5 @@
-import {expectType} from 'tsd-check';
-import junk from '.';
+import {expectType} from 'tsd';
+import junk = require('.');
 
 expectType<boolean>(junk.is('foo'));
 expectType<boolean>(junk.not('foo'));
