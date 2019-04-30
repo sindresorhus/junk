@@ -13,14 +13,11 @@ $ npm install junk
 ## Usage
 
 ```js
-const {promisify} = require('util');
-const fs = require('fs');
+const {promises: fs} = require('fs');
 const junk = require('junk');
 
-const pReaddir = promisify(fs.readdir);
-
 (async () => {
-	const files = await pReaddir('some/path');
+	const files = await fs.readdir('some/path');
 
 	console.log(files);
 	//=> ['.DS_Store', 'test.jpg']
