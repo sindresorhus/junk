@@ -1,6 +1,6 @@
 'use strict';
 
-const blacklist = [
+const ignoreList = [
 	// # All
 	'^npm-debug\\.log$', // Error log for npm
 	'^\\..*\\.swp$', // Swap file for vim state
@@ -29,7 +29,7 @@ exports.re = () => {
 	throw new Error('`junk.re` was renamed to `junk.regex`');
 };
 
-exports.regex = new RegExp(blacklist.join('|'));
+exports.regex = new RegExp(ignoreList.join('|'));
 
 exports.is = filename => exports.regex.test(filename);
 
