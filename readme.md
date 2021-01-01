@@ -1,4 +1,4 @@
-# junk [![Build Status](https://travis-ci.org/sindresorhus/junk.svg?branch=master)](https://travis-ci.org/sindresorhus/junk)
+# junk
 
 > Filter out [system junk files](test.js) like `.DS_Store` and `Thumbs.db`
 
