@@ -1,5 +1,3 @@
-'use strict';
-
 const ignoreList = [
 	// # All
 	'^npm-debug\\.log$', // Error log for npm
@@ -22,18 +20,15 @@ const ignoreList = [
 	'^Thumbs\\.db$', // Image file cache
 	'^ehthumbs\\.db$', // Folder config file
 	'^Desktop\\.ini$', // Stores custom folder attributes
-	'@eaDir$' // Synology Diskstation "hidden" folder where the server stores thumbnails
+	'@eaDir$', // Synology Diskstation "hidden" folder where the server stores thumbnails
 ];
 
-exports.re = () => {
-	throw new Error('`junk.re` was renamed to `junk.regex`');
-};
+export const junkRegex = new RegExp(ignoreList.join('|'));
 
-exports.regex = new RegExp(ignoreList.join('|'));
+export function isJunk(filename) {
+	return junkRegex.test(filename);
+}
 
-exports.is = filename => exports.regex.test(filename);
-
-exports.not = filename => !exports.is(filename);
-
-// TODO: Remove this for the next major release
-exports.default = module.exports;
+export function isNotJunk(filename) {
+	return !isJunk(filename);
+}

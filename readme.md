@@ -2,47 +2,37 @@
 
 > Filter out [system junk files](test.js) like `.DS_Store` and `Thumbs.db`
 
-
 ## Install
 
 ```
 $ npm install junk
 ```
 
-
 ## Usage
 
 ```js
-const {promises: fs} = require('fs');
-const junk = require('junk');
+import fs from 'node:fs/promises';
+import {isNotJunk} from 'junk';
 
-(async () => {
-	const files = await fs.readdir('some/path');
+const files = await fs.readdir('some/path');
 
-	console.log(files);
-	//=> ['.DS_Store', 'test.jpg']
+console.log(files);
+//=> ['.DS_Store', 'test.jpg']
 
-	console.log(files.filter(junk.not));
-	//=> ['test.jpg']
-})();
+console.log(files.filter(isNotJunk));
+//=> ['test.jpg']
 ```
-
 
 ## API
 
-### junk.is(filename)
+### isJunk(filename)
 
 Returns `true` if `filename` matches a junk file.
 
-### junk.not(filename)
+### isNotJunk(filename)
 
-Returns `true` if `filename` doesn't match a junk file.
+Returns `true` if `filename` does not match a junk file.
 
-### junk.regex
+### junkRegex
 
 Regex used for matching junk files.
-
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)

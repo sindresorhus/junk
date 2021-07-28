@@ -1,40 +1,42 @@
-declare const junk: {
-	/**
-	Returns `true` if `filename` matches a junk file.
-	*/
-	is(filename: string): boolean;
+/**
+Returns `true` if `filename` matches a junk file.
 
-	/**
-	Returns `true` if `filename` doesn't match a junk file.
+@example
+```
+import fs from 'node:fs/promises';
+import {isJunk} from 'junk';
 
-	@example
-	```
-	import {promisify} from 'util';
-	import * as fs from 'fs';
-	import junk = require('junk');
+const files = await fs.readdir('some/path');
 
-	const pReaddir = promisify(fs.readdir);
+console.log(files);
+//=> ['.DS_Store', 'test.jpg']
 
-	(async () => {
-		const files = await pReaddir('some/path');
+console.log(files.filter(isJunk));
+//=> ['.DS_Store']
+```
+*/
+export function isJunk(filename: string): boolean;
 
-		console.log(files);
-		//=> ['.DS_Store', 'test.jpg']
+/**
+Returns `true` if `filename` does not match a junk file.
 
-		console.log(files.filter(junk.not));
-		//=> ['test.jpg']
-	})();
-	```
-	*/
-	not(filename: string): boolean;
+@example
+```
+import fs from 'node:fs/promises';
+import {isNotJunk} from 'junk';
 
-	/**
-	Regex used for matching junk files.
-	*/
-	readonly regex: RegExp;
+const files = await fs.readdir('some/path');
 
-	// TODO: Remove this for the next major release
-	default: typeof junk;
-};
+console.log(files);
+//=> ['.DS_Store', 'test.jpg']
 
-export = junk;
+console.log(files.filter(isNotJunk));
+//=> ['test.jpg']
+```
+*/
+export function isNotJunk(filename: string): boolean;
+
+/**
+Regex used for matching junk files.
+*/
+export const junkRegex: RegExp;

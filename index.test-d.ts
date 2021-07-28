@@ -1,6 +1,6 @@
 import {expectType} from 'tsd';
-import junk = require('.');
+import {isJunk, isNotJunk, junkRegex} from './index.js';
 
-expectType<boolean>(junk.is('foo'));
-expectType<boolean>(junk.not('foo'));
-expectType<RegExp>(junk.regex);
+expectType<boolean>(isJunk('foo'));
+expectType<boolean>(isNotJunk('foo'));
+expectType<RegExp>(junkRegex);

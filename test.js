@@ -1,5 +1,5 @@
 import test from 'ava';
-import junk from '.';
+import {isJunk, isNotJunk} from './index.js';
 
 const fixture = [
 	'.DS_Store',
@@ -17,24 +17,24 @@ const fixture = [
 	'Desktop.ini',
 	'npm-debug.log',
 	'.test.swp',
-	'@eaDir'
+	'@eaDir',
 ];
 
 const notFixture = [
 	'test',
 	'Icon',
 	'Icons.woff',
-	'.Spotlight-V100-unicorn'
+	'.Spotlight-V100-unicorn',
 ];
 
 test('matches junk files', t => {
 	for (const element of fixture) {
-		t.true(junk.is(element));
+		t.true(isJunk(element));
 	}
 });
 
 test('does not match non-junk files', t => {
 	for (const element of notFixture) {
-		t.true(junk.not(element));
+		t.true(isNotJunk(element));
 	}
 });
