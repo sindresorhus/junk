@@ -15,6 +15,7 @@ const fixture = [
 	'Thumbs.db',
 	'ehthumbs.db',
 	'Desktop.ini',
+	'desktop.ini',
 	'npm-debug.log',
 	'.test.swp',
 	'@eaDir',
