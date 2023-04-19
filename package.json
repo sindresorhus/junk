@@ -1,6 +1,6 @@
 {
 	"name": "junk",
-	"version": "4.0.0",
+	"version": "4.0.1",
 	"description": "Filter out system junk files like .DS_Store and Thumbs.db",
 	"license": "MIT",
 	"repository": "sindresorhus/junk",
